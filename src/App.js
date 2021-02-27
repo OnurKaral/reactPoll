@@ -10,18 +10,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
+      <div className="demo">
+          <div className="demo-nav" >
               <Link to="/">Questions</Link>
-            </li>
-            <li>
               <Link to="/new">New</Link>
-            </li>
-          
-          </ul>
-        </nav>
+            </div>
 
         <Switch>
           <Route path="/" exact component={Questions}/>
