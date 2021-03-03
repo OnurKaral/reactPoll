@@ -19,8 +19,6 @@ function App() {
         <Switch>
         <Route path="/new" exact component={New}/>
           <Route path="/"  component={Questions}/>
-        
-         
           
         </Switch>
       </div>

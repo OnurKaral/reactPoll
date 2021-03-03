@@ -9,7 +9,7 @@ function New() {
     const [addPOLL, { data, loading, error }] = useMutation(NEW_POLL_QUESTION,{
         onCompleted: () => {
         //    setQuestion('');
-          //  setOptions('');
+        //    setOptions('');
         }
     });
     const [question, setQuestion] = useState("");
