@@ -8,7 +8,7 @@ import Questions from './pages/Questions';
 import New from './pages/New';
 function App() {
   return (
-    <div className="App">
+    <div className="App"  className="center">
       <Router>
       <div className="demo">
           <div className="demo-nav" >
