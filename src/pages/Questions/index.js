@@ -1,5 +1,3 @@
-
-
 function Questions() {
     return (
         <div>
