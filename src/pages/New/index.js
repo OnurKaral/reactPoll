@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { Input } from 'antd';
 import { Button } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
@@ -6,7 +6,12 @@ import { gql, useMutation } from '@apollo/client';
 import {NEW_POLL_QUESTION} from './queries'
 
 function New() {
-    const [addPOLL, { data }] = useMutation(NEW_POLL_QUESTION);
+    const [addPOLL, { data, loading, error }] = useMutation(NEW_POLL_QUESTION,{
+        onCompleted: () => {
+        //    setQuestion('');
+          //  setOptions('');
+        }
+    });
     const [question, setQuestion] = useState("");
     const [options, setOptions] = useState([{title: "a"},{ title: "b"}]);
 
@@ -17,12 +22,17 @@ function New() {
 
 };
     const handleCreate =() => {
+        const optionsCount = options.filter((option) =>option.title !== '');
+        if(question === "" || optionsCount.length < 2) return;
+
+        
+
         addPOLL({ 
             variables: { 
                 object: {
                     title: question,  
                     options: {
-                    data: options,
+                    data: optionsCount,
                 },
             },
         },
@@ -47,7 +57,7 @@ function New() {
        ))}
        
        <Button  onClick={() =>setOptions([...options, {title:""}])}>New Option</Button>   
-       <Button  onClick={handleCreate} type="primary">Primary Button</Button>
+       <Button  onClick={handleCreate} disabled={loading} type="primary">Primary Button</Button>
     </div>
     )
 }
