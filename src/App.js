@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Questions from './pages/Questions';
 import New from './pages/New';
+import PollQuestion from './pages/PollQuestion/index';
 function App() {
   return (
     <div className="App"  className="center">
@@ -14,12 +15,15 @@ function App() {
           <div className="demo-nav" >
               <Link to="/">Questions</Link>
               <Link to="/new">New</Link>
+              
             </div>
 
         <Switch>
-        <Route path="/new" exact component={New}/>
-          <Route path="/"  component={Questions}/>
-          
+        <Route path="/" exact component={Questions} />
+							<Route path="/q/:id" component={PollQuestion} />
+							<Route path="/new" component={New} />
+       
+
         </Switch>
       </div>
     </Router>
