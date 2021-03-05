@@ -1,7 +1,7 @@
 
 import { gql } from "@apollo/client";
 
-export const QUESTION_DETAIL_SUBSCRIPTION = gql`
+export const POLL_DETAIL_SUBSCRIPTION = gql`
 	subscription QuestionDetailSubscription($id: Int!) {
 		questions_by_pk(id: $id) {
 			id
@@ -19,8 +19,8 @@ export const QUESTION_DETAIL_SUBSCRIPTION = gql`
 	}
 `;
 
-export const NEW_VOTE = gql`
-	mutation NewVote($object: votes_insert_input!) {
+export const VOTE = gql`
+	mutation Vote($object: votes_insert_input!) {
 		insert_votes_one(object: $object) {
 			id
 		}
