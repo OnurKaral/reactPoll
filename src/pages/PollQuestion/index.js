@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import {useMutation,useSubscription } from '@apollo/client';
 import {POLL_DETAIL_SUBSCRIPTION,VOTE} from './queries'
+import { Button } from 'antd';
 
 function PollQuestion() {
     const { id } = useParams();
@@ -53,18 +54,27 @@ function PollQuestion() {
 			{options.map((option, i) => (
 				<label htmlFor={i} key={i}>
 					{!isVoted && (
-						<input
+
+						<div>
+						<input 
 							name="selected"
 							value={option.id}
 							id={i}
 							type="radio"
 							onChange={({ target }) => setSelectedOptionId(target.value)}
-						/>
+							
+						
+						/> 
+						
+						<b>{option.title}</b>
+						</div>
+						
 					)}
-					<b>{option.title}</b>
+					
 					{isVoted && (
 						<>
 							<div>
+							<h2>{option.title}</h2>
 								<progress
 									id="file"
 									value={option.votes_aggregate.aggregate.count}
@@ -93,9 +103,9 @@ function PollQuestion() {
 			))}
 
 			{!isVoted && (
-				<button onClick={handleClick} disabled={newVoteLoading}>
+				<Button onClick={handleClick} disabled={newVoteLoading} type="primary">
 					Vote
-				</button>
+				</Button>
 			)}
 		</div>
 	);

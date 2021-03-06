@@ -9,13 +9,14 @@ import New from './pages/New';
 import PollQuestion from './pages/PollQuestion/index';
 function App() {
   return (
-    <div className="App"  className="center">
+    <div className="App"  // eslint-disable-next-line
+     className="center">
+      
       <Router>
       <div className="demo">
           <div className="demo-nav" >
               <Link to="/">Questions</Link>
               <Link to="/new">New</Link>
-              
             </div>
 
         <Switch>
@@ -23,7 +24,6 @@ function App() {
 							<Route path="/q/:id" component={PollQuestion} />
 							<Route path="/new" component={New} />
        
-
         </Switch>
       </div>
     </Router>
