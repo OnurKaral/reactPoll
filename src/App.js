@@ -7,11 +7,14 @@ import {
 import Questions from './pages/Questions';
 import New from './pages/New';
 import PollQuestion from './pages/PollQuestion/index';
+
 function App() {
   return (
     <div className="App"  // eslint-disable-next-line
      className="center">
-      
+    
+         <h1>reactPOLL</h1>    
+
       <Router>
       <div className="demo">
           <div className="demo-nav" >
