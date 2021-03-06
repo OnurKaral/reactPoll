@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import { gql, useSubscription } from '@apollo/client';
+import { useSubscription } from '@apollo/client';
 import {POLL_LIST_SUBSCRIPTION} from './queries'
 import { Link } from "react-router-dom";
-import { List, Typography, Divider } from 'antd';
+import { List} from 'antd';
 
 
 function Questions() {

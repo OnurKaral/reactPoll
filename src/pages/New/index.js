@@ -1,12 +1,12 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import { Input } from 'antd';
 import { Button } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import { gql, useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import {NEW_POLL_QUESTION} from './queries'
 
 function New() {
-    const [addPOLL, { data, loading, error }] = useMutation(NEW_POLL_QUESTION,{
+    const [addPOLL, { loading }] = useMutation(NEW_POLL_QUESTION,{
         onCompleted: () => {
         //    setQuestion('');
         //    setOptions('');

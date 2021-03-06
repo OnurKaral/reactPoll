@@ -1,4 +1,4 @@
-import { gql, useMutation } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 export const NEW_POLL_QUESTION = gql`
   mutation Newpollq($object: questions_insert_input!) {
