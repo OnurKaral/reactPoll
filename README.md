@@ -1,5 +1,4 @@
 
-[Live Site](https://reactpoll.netlify.app/)
 
 ## Available Scripts
 
