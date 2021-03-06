@@ -1,5 +1,5 @@
 
-[Live Site](https://github.com/facebook/create-react-app)
+[Live Site](https://reactpoll.netlify.app/)
 
 ## Available Scripts
 
