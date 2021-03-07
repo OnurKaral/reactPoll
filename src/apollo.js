@@ -8,7 +8,7 @@ const httpLink = new HttpLink({
 });
 
 const webSocketLink = new WebSocketLink({
-	uri: `ws://reactjspoll.site/v1/graphql`,
+	uri: `wss://reactjspoll.site/v1/graphql`,
 	options: {
 		reconnect: true,
 	},
