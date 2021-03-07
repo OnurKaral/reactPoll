@@ -1,4 +1,4 @@
-[Live Site]`:sparkles:`(http://localhost:3000)
+[Live Site](https://reactpoll.netlify.app/)
 
 ## Available Scripts
 
