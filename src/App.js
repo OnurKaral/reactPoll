@@ -13,7 +13,7 @@ function App() {
     <div className="App"  // eslint-disable-next-line
      className="center">
     
-         <h1>reactPOLL</h1>    
+         <h1 style={{marginLeft: "15px"}}>reactPOLL</h1>    
 
       <Router>
       <div className="demo">
