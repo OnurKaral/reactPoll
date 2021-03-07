@@ -4,11 +4,11 @@ import { getMainDefinition } from '@apollo/client/utilities';
 import { WebSocketLink } from '@apollo/client/link/ws';
 
 const httpLink = new HttpLink({
-	uri: `https://reactjspoll.hasura.app/v1/graphql`,
+	uri: `https://reactjspoll.site/v1/graphql`,
 });
 
 const webSocketLink = new WebSocketLink({
-	uri: `wss://reactjspoll.hasura.app/v1/graphql`,
+	uri: `wss://reactjspoll.site/v1/graphql`,
 	options: {
 		reconnect: true,
 	},
