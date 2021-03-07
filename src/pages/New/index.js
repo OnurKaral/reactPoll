@@ -57,7 +57,7 @@ function New() {
        ))}
        
        <Button  onClick={() =>setOptions([...options, {title:""}])}>New Option</Button>   
-       <Button  onClick={handleCreate} disabled={loading} type="primary">Primary Button</Button>
+       <Button  onClick={handleCreate} disabled={loading} type="primary">Create Poll</Button>
     </div>
     )
 }
