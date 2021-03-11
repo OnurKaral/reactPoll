@@ -14,19 +14,18 @@
 .app-list {
   margin-top: 16px;
 }
-  [data-theme="dark"] .demo-nav {
-    background: #141414;
-  }
+[data-theme="dark"] .demo-nav {
+  background: #141414;
+}
 
-.center{
+.center {
   margin: auto;
   width: 50%;
   padding: 10px;
 }
-.inputs{
+.inputs {
   margin: 10px;
-  
 }
-.buttons{
-  margin-left: 5px
+.buttons {
+  margin-left: 5px;
 }
