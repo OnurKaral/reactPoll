@@ -1,4 +1,5 @@
 [Live Site](https://reactpoll.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01b3ba08-9d3a-4651-a86e-809b1e2fe62f/deploy-status)](https://app.netlify.com/sites/reactpoll/deploys)
 
 ## Available Scripts
 
@@ -19,5 +20,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
